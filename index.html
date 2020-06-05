@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Open Sans -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet"> 
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="styles/ld.css">
+
+    <!-- My styles -->
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/doc-style.css">
+
+
+
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/9bb6abc112.js" crossorigin="anonymous"></script>
+
+    <title>Basic UI</title>
+
+
+  </head>
+  <body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light p-0 mainNav">
+
+            <a class="navbar-brand py-0" href="#">
+                <img class="brandLogo" src="images/logo-mobile.svg">
+            </a>
+
+
+            <div id="navbarNavDropdown" class="ml-auto">
+
+                <div class="navbar-nav ml-auto d-flex flex-row">
+                    
+                    <div class="nav-item px-5 py-4 my-0 d-none d-lg-inline-flex collapse navbar-collapse">
+                        <a href="#" class="nav-link">1-855-231-8424</a>
+                    </div>    
+                
+                    <div class="nav-item border-left dropdown px-1 px-md-5 py-md-4 my-0">
+                        <!-- <a href="#" class="nav-link text-uppercase">Help</a> -->
+                        <a class="nav-link dropdown-toggle pl-0" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Help
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item border-left px-1 px-md-5 py-md-4 my-0 d-inline-block d-lg-none">
+                        <a href="#" class="nav-link" onclick="showSearch()">
+                            <img id="magGlass" src="images/search.svg" style="width: 25px; height: 26px;">
+                        </a>
+
+                        <div id="searchMainMenu" class="d-none" style="position: absolute; top: 0; left: 0; width: 100%; height: 100vh; background-color: rgba(0, 0, 0, 0.7); z-index: 999; align-items: center; justify-content: center;">
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0 search_submit" type="submit" onclick="showSearch()">Go</button>
+                            </form>                            
+                        </div>
+
+                    </div>
+
+                    <div class="collapse navbar-collapse">
+                        <div class="nav-item border-left px-4 px-xl-5 py-4 my-0">
+
+                            <a href="#" class="nav-link">Create Free Account</a>
+                            
+                        </div>
+
+                        <div class="nav-item border-left px-4 px-xl-5 py-4 my-0">
+
+                            <a href="#" class="nav-link">Sign In</a>
+                            
+                        </div>
+                        
+                    </div>
+
+
+
+                    
+                </div>
+
+    <!--             <form class="form-inline my-2 my-lg-0 px-5">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form> -->
+
+            </div>
+
+            <div class="nav-item border-left px-md-5 py-md-4 my-0 d-inline-block d-lg-none">
+
+                <button class="navbar-toggler border-left" type="button" data-toggle="collapse" data-target=".myNavDropdown" aria-controls="myNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>                
+            </div>
+
+
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark LDTopMenu py-0 py-lg-2">
+
+            <div class="collapse navbar-collapse myNavDropdown" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Estate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Real Estate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Financial</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Business</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Family</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">All</a>
+                    </li>
+
+                </ul>
+                <form class="form-inline d-none d-lg-flex my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Go</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+           <!--  <div class="col-12 subHead">
+
+                <p class="resi">FREE RESIDENTIAL RENTAL / LEASE AGREEMENT</p>
+                
+            </div> -->
+
+            <div class="col-12 text-center mt-5 pt-5 pb-3">
+                <h1 class="h1-resources">Resource Center</h1>
+            </div>
+
+            <div class="col-12 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 mb-5" id="searchBlog">
+                <div class="input-group mb-3 mx-auto" style="max-width: 500px;">
+                    <input type="text" class="form-control rounded-lg input-search-resources mr-2" placeholder="Search..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <a href="search-results.html"><span class="input-group-text input-search-resources rounded-lg" id="basic-addon2">GO</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="d-none d-md-block col-12 col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 mt-5">
+
+                <ul class="nav nav-tabs resources-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link resources-tab-links active" data-toggle="tab" role="tab" href="#">All</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link resources-tab-links" data-toggle="tab" role="tab" href="#">Estate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link resources-tab-links" data-toggle="tab" role="tab" href="#">Real Estate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link resources-tab-links" data-toggle="tab" role="tab" href="#">Financial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link resources-tab-links" data-toggle="tab" role="tab" href="#">Business</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link resources-tab-links" data-toggle="tab" role="tab" href="#">Family</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+
+            <div class="col-12 col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 my-5">
+
+            
+                <div class="card-columns">
+                    <div class="card card-border">
+                        <div class="card-header text-uppercase font-weight-bold">Blog</div>  
+                        <img src="images/Every-Parent-Needs-When-Traveling-with-Children_resized-4.jpg" class="px-3 pt-3 img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">3 Documents Every Parent Needs When Traveling With Children</h5>
+
+                            <p class="card-text">Whether you’re flying, driving, or sailing, traveling internationally can be stressful—especially with kids. Since different...</p>
+                        
+                        
+                            <a href="faq-single.html">Read More</a>
+                        </div>
+                    </div>
+                    <div class="card card-border">
+                        <div class="card-header text-uppercase font-weight-bold">Dictionary</div>
+                        
+                        <div class="card-body">
+                            
+
+                            <p class="card-text">What is the meaning of sole custody?</p>
+                        
+                        
+                            <a href="faq-single.html">Read More</a>
+                        </div>
+                    </div>
+                    <div class="card card-border">
+                        <div class="card-header text-uppercase font-weight-bold">Blog</div>  
+                        <img src="images/couple-moving-holding-boxes-01.jpg" class="px-3 pt-3 img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Tenants: How to End Your Lease Early</h5>
+
+                            <p class="card-text">Maybe you want to move into your significant other’s place. Or maybe you just got a job offer in a different city, but you just renewed the...</p>
+                        
+                        
+                            <a href="faq-single.html">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-border">
+                         <div class="card-header text-uppercase font-weight-bold">FAQ</div>
+                        
+                        <div class="card-body">
+                            <p class="card-text">What documents are needed if a child is traveling with a parent who has sole legal custody?</p>
+                        
+                        
+                            <a href="faq-single.html">Read More</a>
+                        </div>
+                    </div>
+                    <div class="card card-border">
+                         <div class="card-header text-uppercase font-weight-bold">Guide</div>
+                         <img src="images/Artboard-20@4x.png" class="px-3 pt-3 img-fluid" alt="...">
+
+                        <div class="card-body">
+                            <h5 class="card-title">A Parents’ Guide to Choosing a Legal Guardian</h5>
+                            <p class="card-text">Many parents put off appointing a legal guardian for their children because they fear they’ll make the wrong choice, or they keep meaning to...</p>
+                        
+                        
+                            <a href="faq-single.html">Read More</a>
+                        </div>
+                    </div>
+                    <div class="card card-border">
+                         <div class="card-header text-uppercase font-weight-bold">Dictionary</div>
+                        
+                        <div class="card-body">
+                            <p class="card-text">What is the meaning of incapacity?</p>
+                        
+                        
+                            <a href="faq-single.html">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-border">
+                         <div class="card-header text-uppercase font-weight-bold">Dictionary</div>
+
+                        <div class="card-body">
+                            <p class="card-text">What is the meaning of general partner?</p>
+                        
+                        
+                            <a href="faq-single.html">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-border">
+                         <div class="card-header text-uppercase font-weight-bold">Guide</div>
+                         <img src="images/docs-galore@2x.png" class="px-3 pt-3 img-fluid" alt="...">
+
+                        <div class="card-body">
+                            <h5 class="card-title">A Guide to Estate Planning for Married Couples</h5>
+                            <p class="card-text">Financial responsibilities and legal rights change in a number of ways after marriage. It’s important to research estate distribution laws...</p>
+                        
+                        
+                            <a href="faq-single.html">Read More</a>
+                        </div>
+                    </div>
+                    <div class="card card-border">
+                         <div class="card-header text-uppercase font-weight-bold">Dictionary</div>
+
+                        <div class="card-body">
+                            <p class="card-text">What is the meaning of Joint Custody?</p>
+                        
+                        
+                            <a href="faq-single.html">Read More</a>
+                        </div>
+                    </div>
+                    <div class="card card-border">
+                        <div class="card-header text-uppercase font-weight-bold">Blog</div>  
+                        <img src="images/bedroom-for-rent-pretty.png" class="px-3 pt-3 img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">How to Rent a Room in Your House</h5>
+
+                            <p class="card-text">Renting a room in your house is a great way to make extra cash, but it’s not for everyone. In this post, discover...</p>
+                        
+                        
+                            <a href="faq-single.html">Read More</a>
+                        </div>
+                    </div>
+                    <div class="card card-border">
+                         <div class="card-header text-uppercase font-weight-bold">FAQ</div>
+                        
+                        <div class="card-body">
+                            <p class="card-text">What documents are needed if a child is traveling with a parent who has sole legal custody?</p>
+                        
+                        
+                            <a href="faq-single.html">Read More</a>
+                        </div>
+                    </div>
+                    <div class="card card-border">
+                        <div class="card-header text-uppercase font-weight-bold">Blog</div>  
+                        <img src="images/Things-your-executor-can-and-cant-do.jpg" class="px-3 pt-3 img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Things Your Executor Can and Can’t Do</h5>
+
+                            <p class="card-text">The executor of a Will is responsible for making a lot of different decisions, but are there limits...</p>
+                        
+                        
+                            <a href="faq-single.html">Read More</a>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+
+
+        </div>
+
+     
+    </div>
+
+
+
+
+    <footer>
+
+        <div class="container">
+
+            <div class="row">
+                    <div class="col-12 d-block d-md-none">
+
+                        <a href="#"><h5 class="text-center">Help</h5></a>
+
+                    </div>
+
+                    <div class="col-4 text-center  d-block d-md-none">
+
+                        <a href="">About Us</a>
+
+                    </div>
+                    <div class="col-4 text-center  d-block d-md-none">
+
+                        <a href="">Privacy Policy</a>
+
+                    </div>
+                        <div class="col-4 text-center  d-block d-md-none">
+
+                        <a href="">Disclaimer</a>
+
+                    </div>
+
+                <div class="col-12">
+
+                    <div class="footerSlate_container">
+                        <div class="footerSlate_simple">
+                            <div class="footerSlate_left d-none d-md-block">
+                                <div class="footerv2_phone">
+                                    1-855-231-8424<br><span class="footerv2_phone_hours">Mon-Fri 8am - 7pm ET</span>
+                                </div>
+                            </div>
+                            
+                            <div class="footerv2_logos">
+                                <div class="footerv2_logo_symantec">
+                                    
+                                    <img class="img-fluid" name="seal" src="https://seal.websecurity.norton.com/getseal?at=0&amp;sealid=0&amp;dn=www.lawdepot.ca&amp;lang=en&amp;tpt=transparent" usemap="#sealmap_large" alt="" border="0"> 
+
+                                </div>
+                                <div class="footerv2_logo_trustwave">
+                                    
+                                    <img class="img-fluid"  id="trustwaveSealImage" src="https://sealserver.trustwave.com/seal_image.php?customerId=x4ix8frNfNOhLcVHKItmgytngYYVM8&amp;size=105x54&amp;style=" style="cursor:pointer;" alt="This site is protected by Trustwave's Trusted Commerce program" title="This site is protected by Trustwave's Trusted Commerce program" border="0">
+                                </div>
+
+                                <div class="footerv2_logo_bbb">
+
+                                    <img class="logo_bb img-fluid" src="https://seal-edmonton.bbb.org/seals/blue-seal-293-61-lawdepottm-134065.png" alt="Click for the Business Review of LawDepot TM, a Legal Forms in Edmonton AB">
+
+                                </div>
+                            </div>
+                    
+
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+
+            
+        </div>
+
+        <div class="w-100 bottomFootContain">
+            <div class="container">
+
+                <div class="row">
+
+
+
+                    <div class="col-12">
+
+                        <div class="footerv2_disclaimer">
+                            <p>Your use of this site is subject to our <a href="https://www.lawdepot.ca/terms.php">Terms of Use</a>, <a href="https://www.lawdepot.ca/disclaimer.php">Disclaimer</a>, and <a href="https://www.lawdepot.ca/privacy.php">Privacy Policy</a>. LawDepot&reg; is not a law firm and cannot provide legal advice. We provide information and software and you are responsible for appropriately using this material. &copy;2002-2019 LawDepot&reg; (Sequiter Inc.). All Rights Reserved.</p>
+                        </div>
+                                    
+                    </div>
+                    
+                </div>
+                
+            </div>            
+        </div>
+
+
+
+
+
+
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+    <script src="js/scripts.js"></script>
+
+
+  </body>
+</html>

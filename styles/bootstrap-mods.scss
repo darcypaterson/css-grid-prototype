@@ -1,0 +1,17 @@
+/* Change dropdowns from click to hover */
+.dropdown:hover>.dropdown-menu {
+    display: block;
+    top: calc(100% - 2px);
+}
+
+.card-header {
+	font-size: 14px;
+	border-bottom: 1px solid $borderOnSearch;
+}
+
+.navbar-brand {
+	margin-right: 0;
+	width: auto;
+}
+
+
